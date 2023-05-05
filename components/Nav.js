@@ -30,7 +30,7 @@ const Nav = () => {
         <span>Ecommerce admin</span>
       </Link>
       <nav className="flex flex-col gap-2">
-        <Link className={pathname.includes('/') ? activeLink : inactiveLink} href={"/"}>
+        <Link className={pathname === '/' ? activeLink : inactiveLink} href={"/"}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -47,7 +47,7 @@ const Nav = () => {
           </svg>
           Dashboard
         </Link>
-        <Link className={pathname.includes('/products') ? activeLink : inactiveLink} href={"/products"} >
+        <Link className={pathname === '/products' ? activeLink : inactiveLink} href={"/products"} >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -64,7 +64,7 @@ const Nav = () => {
           </svg>
           Products
         </Link>
-        <Link className={pathname.includes('/orders') ? activeLink : inactiveLink} href={"/orders"}>
+        <Link className={pathname ==='/orders' ? activeLink : inactiveLink} href={"/orders"}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -81,7 +81,7 @@ const Nav = () => {
           </svg>
           Orders
         </Link>
-        <Link className={pathname.includes('/settings') ? activeLink : inactiveLink} href={"/settings"}>
+        <Link className={pathname === '/settings' ? activeLink : inactiveLink} href={"/settings"}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
