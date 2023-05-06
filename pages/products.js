@@ -1,10 +1,18 @@
-import Layout from '@/components/Layout'
-import React from 'react'
+import Layout from "@/components/Layout";
+import Link from "next/link";
+import React from "react";
 
 const Products = () => {
   return (
-    <Layout>Products</Layout>
-  )
-}
+    <Layout>
+      <Link 
+        href={'/products/new'}
+        className="btn-primary"
+      >
+        Add new product
+      </Link>
+    </Layout>
+  );
+};
 
-export default Products
+export default Products;
