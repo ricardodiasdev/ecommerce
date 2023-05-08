@@ -37,9 +37,12 @@ const ProductForm = ({
     const files = ev.target?.files;
     if (files?.length > 0) {
       const data = new FormData();
-
-      files.map((file) => data.append("files", file));
-      const res = await axios.post("/api/upload", data);
+      for(const file of files) {
+        data.append("files", file);
+      }
+      const res = await axios.post("/api/upload", data, {
+        headers: {"Content-Type":"multipart/form-data"}
+      });
       console.log(res.data);
     }
   };
