@@ -23,15 +23,17 @@ label {
   @apply text-gray-600 text-sm;
 }
 .btn-primary {
-  @apply bg-blue-900 text-white px-4 py-1 rounded-se-md shadow-md;
+  @apply bg-blue-900 text-white px-4 py-1 rounded-md shadow-md;
 }
 
 .btn-primary:hover {
   @apply bg-blue-500 transition;
 }
+
 table.basic {
   @apply w-full bg-white rounded-sm shadow-md;
 }
+
 table.basic thead tr td,
 table.basic thead tr th {
   @apply text-sm text-gray-600 uppercase border-b border-gray-200 px-4 py-2;
@@ -47,8 +49,17 @@ table.basic a {
   @apply px-4 py-1 rounded-md;
 }
 .btn-red {
-  @apply bg-red-200 text-red-600 px-4 py-1 rounded-sm shadow-sm;
+  @apply bg-red-900 text-white px-4 py-1 rounded-md shadow-md;
 }
+
+.btn-red:hover {
+  @apply bg-red-500 transition;
+}
+
 .btn-default {
-  @apply bg-white text-gray-800 px-4 py-1 rounded-sm border border-gray-200 shadow-sm;
+  @apply bg-white text-gray-800 px-4 py-1 rounded-md shadow-md border border-gray-200;
+}
+
+.btn-default:hover {
+  @apply bg-gray-500 transition;
 }
