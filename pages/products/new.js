@@ -1,54 +1,11 @@
 import Layout from "@/components/Layout";
-import axios from "axios";
-import { useRouter } from "next/navigation";
-import { toast } from "react-toastify";
-import React, { useState } from "react";
+import ProductForm from "@/components/ProductForm";
 
 const NewProduct = () => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [price, setPrice] = useState("");
-  const route = useRouter();
-
-  const createProduct = async (ev) => {
-    ev.preventDefault();
-    const data = { title, description, price };
-    await axios.post("/api/products", data).then(() => {
-      toast.success("Product created!");
-      route.push("/products");
-    });
-  };
-
   return (
     <Layout>
-      <form onSubmit={createProduct}>
-        <div className="flex flex-col">
-          <h1>New Product</h1>
-          <label>Product name</label>
-          <input
-            type="text"
-            placeholder="Product name"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-          <label>Description</label>
-          <textarea
-            placeholder="Description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          ></textarea>
-          <label>Price (in USD)</label>
-          <input
-            type="text"
-            placeholder="Price"
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
-          />
-        </div>
-        <button type="submit" className="btn-primary">
-          Save
-        </button>
-      </form>
+      <h1>New Product</h1>
+      <ProductForm />
     </Layout>
   );
 };
